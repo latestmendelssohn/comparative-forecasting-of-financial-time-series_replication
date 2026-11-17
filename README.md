@@ -5,8 +5,6 @@ A reproducible R project comparing classical time-series models and tree-based m
 ## Repository contents
 
 - `nifty50_complete_analysis.R` — end-to-end analysis: Yahoo Finance data download, log-price/log-return construction, exploratory plots, stationarity and dependence tests, ARMA order selection using AIC/BIC, residual diagnostics, ARMA–GARCH estimation and diagnostics, rolling forecasts, Random Forest and XGBoost tuning, test predictions, metrics, and plots.
-- `nifty50_forecasting_academic_style.tex` — LaTeX source for the academic-style report.
-- `nifty50_forecasting_academic_style.tex` — report source; compile it with LaTeX after generating the figures.
 - `Results/` — recorded result tables from the experiment discussed in the report.
 
 The R script generates the PNG figures and CSV outputs in the working directory when it is run. The figure filenames correspond to those referenced by the LaTeX report. Run the R script first, then compile the `.tex` file from the project root so the figure files are available. The compiled PDF and generated PNGs are not committed in this initial repository version; they can be recreated from the included source files.
