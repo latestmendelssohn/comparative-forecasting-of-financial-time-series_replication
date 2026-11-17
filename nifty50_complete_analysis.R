@@ -50,6 +50,16 @@ cat("First available observation:", as.character(index(nifty_closing)[1]), "\n")
 cat("Last available observation :", as.character(tail(index(nifty_closing), 1)), "\n")
 cat("Number of closing prices    :", NROW(nifty_closing), "\n")
 
+# Save the downloaded data snapshot for reproducibility.
+write.csv(
+  data.frame(
+    Date = as.Date(index(nifty_closing)),
+    Closing_Price = as.numeric(nifty_closing)
+  ),
+  "NIFTY50_Closing_Prices.csv",
+  row.names = FALSE
+)
+
 if (NROW(nifty_closing) <= 600) {
   stop("Not enough observations for the selected training/test design.")
 }
