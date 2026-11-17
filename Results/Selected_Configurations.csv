@@ -1,0 +1,8 @@
+Model,Parameter,Value,Validation_RMSE
+Random Forest,ntree,500,
+Random Forest,mtry,1,
+Random Forest,nodesize,10,0.009063275
+XGBoost,max_depth,2,
+XGBoost,eta,0.03,
+XGBoost,min_child_weight,5,
+XGBoost,nrounds,5,0.008728660
