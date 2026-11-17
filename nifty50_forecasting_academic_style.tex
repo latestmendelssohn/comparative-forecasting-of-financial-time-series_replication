@@ -470,30 +470,32 @@ The best model therefore depends on the forecasting objective:
 
 The following figure environments include the plots generated during the R analysis. Place the image files in the same directory as this \LaTeX{} source. If a file is not present, the document will compile and display a placeholder instead.
 
-\newcommand{\plotplaceholder}[3]{%
-  \IfFileExists{#1}{\includegraphics[width=0.98\textwidth]{#1}}{%
-    \fbox{\parbox{0.9\textwidth}{\centering Figure file not found: \texttt{\detokenize{#1}}.\\Place the plot image in the same folder as this source.}}}%
-  \caption{#2}\label{fig:#3}%
-}
-
 \begin{figure}[H]
 \centering
-\plotplaceholder{NIFTY50_ARIMA_Actual_vs_Predicted.png}{Actual and predicted NIFTY 50 closing prices: ARIMA models.}{arima}
+\includegraphics[width=0.85\textwidth]{NIFTY50_ARIMA_Actual_vs_Predicted.png}
+\caption{Actual versus predicted NIFTY 50 closing prices using ARIMA models.}
+\label{fig:arima}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\plotplaceholder{NIFTY50_GARCH_Actual_vs_Predicted.png}{Actual and predicted NIFTY 50 closing prices: ARMA--GARCH models.}{garch}
+\includegraphics[width=0.85\textwidth]{NIFTY50_GARCH_Actual_vs_Predicted.png}
+\caption{Actual versus predicted NIFTY 50 closing prices using ARMA--GARCH models.}
+\label{fig:garch}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\plotplaceholder{NIFTY50_Tuned_RF_Actual_vs_Predicted.png}{Actual and predicted NIFTY 50 closing prices: tuned Random Forest.}{randomforest}
+\includegraphics[width=0.85\textwidth]{NIFTY50_Tuned_RF_Actual_vs_Predicted.png}
+\caption{Actual versus predicted NIFTY 50 closing prices using tuned Random Forest.}
+\label{fig:randomforest}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\plotplaceholder{NIFTY50_Tuned_XGBoost_Actual_vs_Predicted.png}{Actual and predicted NIFTY 50 closing prices: tuned XGBoost.}{xgboost}
+\includegraphics[width=0.85\textwidth]{NIFTY50_Tuned_XGBoost_Actual_vs_Predicted.png}
+\caption{Actual versus predicted NIFTY 50 closing prices using tuned XGBoost.}
+\label{fig:xgboost}
 \end{figure}
 
 % ==================================================
